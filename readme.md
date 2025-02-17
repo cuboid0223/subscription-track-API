@@ -1,18 +1,30 @@
 
+# 訂閱管理 API
+使用 `express` + `node.js` 實作訂閱管理 API 
+
+實作 `JWT` 認證、資料庫(`mongodb`)建模、API 架構、安全性(`Arcjet`)、自動化傳送訂閱到期信件(`Upstash workflow`)
+
 
 ## Feature
-實施 Arcjet 偵測機器人並限制請求流量
-實施 JSON Web Token 授權 
+1. 實施 Arcjet 偵測機器人並限制請求流量
+2. 實施 JSON Web Token 認證
+3. 導入 Arcjet 機器人檢測、速率限制
+4. 導入 Qstash workflow 自動化寄信
 
-```
-# "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IxMjQyMjQzY2EwYWNjNTRhZDYxYjkiLCJpYXQiOjE3Mzk2NjU3OTYsImV4cCI6MTczOTc1MjE5Nn0.wOh6wontDUgsI-M6AjYsBCbftiYol3ID-edCXwqb7DI"
-# 67b1242243ca0acc54ad61b9
-```
+---
+> 導入 Arcjet 機器人檢測、速率限制
+![導入 Qstash workflow 自動化寄信](/public/image2.png)
+
+
+## Image
+
+>  導入 Qstash workflow 自動化寄信
+![導入 Qstash workflow 自動化寄信](/public/image1.png)
 
 
 
-
-POST `http://localhost:5500/api/v1/subscriptions`
+## Example
+(POST) `http://localhost:5500/api/v1/subscriptions`
 ```json
 {
 
@@ -21,7 +33,7 @@ POST `http://localhost:5500/api/v1/subscriptions`
   "currency": "NTD",
   "frequency": "monthly",
   "category": "entertainment",
-  "startDate": "2025-02-16T17:16:20.248Z", // new Date(toISOString())
+  "startDate": "2025-02-16T17:16:20.248Z",
   "paymentMethod": "Credit Card"
   
 }
