@@ -1,0 +1,43 @@
+{
+  "name": "subsribe-tracker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx app.ts",
+    "dev": "nodemon --exec tsx app.ts"
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalResolver": true
+  },
+  "dependencies": {
+    "@arcjet/node": "^1.0.0-beta.2",
+    "@upstash/workflow": "^0.2.7",
+    "bcryptjs": "^3.0.0",
+    "cookie-parser": "~1.4.4",
+    "dayjs": "^1.11.13",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.7",
+    "express": "~4.16.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.1",
+    "morgan": "~1.9.1",
+    "nodemailer": "^6.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.8",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0"
+  }
+}
